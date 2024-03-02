@@ -15,8 +15,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* Light grey background */
-            color: #333; /* Dark grey text */
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
         }
 
         .container {
@@ -26,8 +26,8 @@
         }
 
         header {
-            background-color: #333; /* Dark grey header */
-            color: #fff; /* White text */
+            background-color: #333333; /* Dark grey header */
+            color: #ffffff; /* White text */
             padding: 20px 0;
         }
 
@@ -45,16 +45,17 @@
         }
 
         nav ul li a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
         }
 
         nav ul li ul {
             display: none;
             position: absolute;
-            background-color: #333; /* Dark grey dropdown background */
+            background-color: #f0f0f0; /* Light grey dropdown background */
             padding: 10px;
-            z-index: 1;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         nav ul li:hover ul {
@@ -67,8 +68,7 @@
         }
 
         nav ul li ul li a {
-            color: #fff;
-            text-decoration: none;
+            color: #000000; /* Black text in dropdown */
         }
 
         section {
@@ -81,20 +81,20 @@
         }
 
         footer {
-            background-color: #333; /* Dark grey footer */
-            color: #fff; /* White text */
+            background-color: #808080; /* Grey footer */
+            color: #ffffff; /* White text */
             text-align: center;
             padding: 20px 0;
         }
 
         .social-icon {
-            color: #fff;
+            color: #ffffff;
             font-size: 24px;
-            margin-right: 10px;
+            margin-right: 20px; /* More space between social media icons */
         }
 
         .social-icon:hover {
-            color: #ffd700; /* Yellow on hover */
+            color: #4682b4; /* Blue on hover */
         }
     </style>
 </head>
@@ -108,9 +108,9 @@
                     <li>
                         <a href="#">Products</a>
                         <ul>
-                            <li><a href="#category1">Category 1</a></li>
-                            <li><a href="#category2">Category 2</a></li>
-                            <li><a href="#category3">Category 3</a></li>
+                            <li><a href="#">Category 1</a></li>
+                            <li><a href="#">Category 2</a></li>
+                            <li><a href="#">Category 3</a></li>
                         </ul>
                     </li>
                     <li><a href="#about">About</a></li>
