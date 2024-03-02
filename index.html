@@ -26,9 +26,10 @@
         }
 
         header {
-            background-color: #ffffff; /* White header */
-            color: #000000; /* Black text */
+            background-color: #808080; /* Grey header */
+            color: #ffffff; /* White text */
             padding: 20px 0;
+            text-align: center;
         }
 
         header h1 {
@@ -45,7 +46,7 @@
         }
 
         nav ul li a {
-            color: #000000;
+            color: #ffffff;
             text-decoration: none;
         }
 
@@ -71,13 +72,11 @@
             color: #000000; /* Black text in dropdown */
         }
 
-        section {
-            padding: 50px 0;
+        .flash-content {
+            background-color: #4682b4; /* Blue */
+            color: #ffffff; /* White text */
+            padding: 10px;
             text-align: center;
-        }
-
-        section h2 {
-            font-size: 28px;
         }
 
         footer {
@@ -120,39 +119,17 @@
         </div>
     </header>
 
-    <section id="home" class="section section-home">
-        <div class="container">
-            <h2>Welcome to our Furniture Retail Store</h2>
-        </div>
-    </section>
-
-    <section id="products" class="section section-products">
-        <div class="container">
-            <h2>Our Products</h2>
-            <!-- Embed the provided code here -->
-            <div id="cincopa_b565e5">...</div>
-            <script type="text/javascript">
-                var cpo = []; cpo["_object"] ="cincopa_b565e5"; cpo["_fid"] = "AsJADLvpaXLU";
-                var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
-                var c = document.getElementsByTagName("script")[0];
-                c.parentNode.insertBefore(cp, c); })();
-            </script>
-        </div>
-    </section>
-
-    <section id="about" class="section section-about">
-        <div class="container">
-            <h2>About Us</h2>
-        </div>
-    </section>
-
-    <section id="contact" class="section section-contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-        </div>
-    </section>
+    <div class="flash-content">
+        <div id="cincopa_b565e5">...</div>
+        <script type="text/javascript">
+            var cpo = []; cpo["_object"] ="cincopa_b565e5"; cpo["_fid"] = "AsJADLvpaXLU";
+            var _cpmp = _cpmp || []; _cpmp.push(cpo);
+            (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+            cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
+            var c = document.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(cp, c); })();
+        </script>
+    </div>
 
     <footer>
         <div class="container">
