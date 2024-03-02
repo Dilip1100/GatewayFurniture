@@ -51,6 +51,16 @@
             text-decoration: none;
         }
 
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
         footer {
             background-color: #222222;
             color: #ffffff;
@@ -73,13 +83,17 @@
         }
 
         /* Frame styling */
-        .frame {
+        .frame-container {
             background-color: #ffffff;
             border: 1px solid #cccccc;
             border-radius: 5px;
             padding: 20px;
             margin: 20px auto;
             max-width: 800px;
+        }
+
+        .flash-content {
+            text-align: center;
         }
     </style>
 </head>
@@ -97,25 +111,20 @@
             </nav>
         </div>
     </header>
-    <div class="frame">
-        <!-- Flash content -->
-        <div id="cincopa_b565e5">...</div>
-        <script type="text/javascript">
-            var cpo = [];
-            cpo["_object"] = "cincopa_b565e5";
-            cpo["_fid"] = "AsJADLvpaXLU";
-            var _cpmp = _cpmp || [];
-            _cpmp.push(cpo);
-            (function() {
-                var cp = document.createElement("script");
-                cp.type = "text/javascript";
-                cp.async = true;
-                cp.src = "https://rtcdn.cincopa.com/libasync.js";
+    <div class="frame-container">
+        <div class="flash-content">
+            <div id="cincopa_b565e5">...</div>
+            <script type="text/javascript">
+                var cpo = []; cpo["_object"] ="cincopa_b565e5"; cpo["_fid"] = "AsJADLvpaXLU";
+                var _cpmp = _cpmp || []; _cpmp.push(cpo);
+                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+                cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
                 var c = document.getElementsByTagName("script")[0];
-                c.parentNode.insertBefore(cp, c);
-            })();
-        </script>
+                c.parentNode.insertBefore(cp, c); })();
+            </script>
+        </div>
     </div>
+
     <footer>
         <div class="container">
             <div class="social-icons">
