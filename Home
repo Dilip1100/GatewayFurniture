@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Retail Store</title>
+    <!-- Add CSS stylesheets and JavaScript files here -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Furniture Retail Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <section id="home">
+            <h2>Welcome to our Furniture Retail Store</h2>
+            <!-- Add carousel or featured products here -->
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <!-- Add product listings and categories here -->
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <!-- Add information about your company and mission here -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <!-- Add contact form or contact information here -->
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2023 Furniture Retail Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
