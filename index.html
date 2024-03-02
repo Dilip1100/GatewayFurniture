@@ -15,8 +15,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff; /* White background */
-            color: #000000; /* Black text */
+            background-color: #f0f0f0;
+            color: #333333;
         }
 
         .container {
@@ -26,23 +26,24 @@
         }
 
         header {
-            background-color: #808080; /* Grey header */
-            color: #ffffff; /* White text */
+            background-color: #222222;
+            color: #ffffff;
             padding: 20px 0;
-            text-align: center;
         }
 
         header h1 {
             font-size: 32px;
+            text-align: center;
         }
 
         nav ul {
             list-style-type: none;
+            text-align: center;
         }
 
         nav ul li {
             display: inline;
-            margin-right: 20px;
+            margin: 0 20px;
         }
 
         nav ul li a {
@@ -50,50 +51,35 @@
             text-decoration: none;
         }
 
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            background-color: #f0f0f0; /* Light grey dropdown background */
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav ul li:hover ul {
-            display: block;
-        }
-
-        nav ul li ul li {
-            display: block;
-            margin: 5px 0;
-        }
-
-        nav ul li ul li a {
-            color: #000000; /* Black text in dropdown */
-        }
-
-        .flash-content {
-            background-color: #4682b4; /* Blue */
-            color: #ffffff; /* White text */
-            padding: 10px;
-            text-align: center;
-        }
-
         footer {
-            background-color: #808080; /* Grey footer */
-            color: #ffffff; /* White text */
+            background-color: #222222;
+            color: #ffffff;
             text-align: center;
             padding: 20px 0;
+        }
+
+        .social-icons {
+            margin-top: 20px;
         }
 
         .social-icon {
             color: #ffffff;
             font-size: 24px;
-            margin-right: 20px; /* More space between social media icons */
+            margin: 0 10px;
         }
 
         .social-icon:hover {
-            color: #4682b4; /* Blue on hover */
+            color: #4682b4;
+        }
+
+        /* Frame styling */
+        .frame {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
         }
     </style>
 </head>
@@ -104,39 +90,39 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li>
-                        <a href="#">Products</a>
-                        <ul>
-                            <li><a href="#">Category 1</a></li>
-                            <li><a href="#">Category 2</a></li>
-                            <li><a href="#">Category 3</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#products">Products</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <div class="flash-content">
+    <div class="frame">
+        <!-- Flash content -->
         <div id="cincopa_b565e5">...</div>
         <script type="text/javascript">
-            var cpo = []; cpo["_object"] ="cincopa_b565e5"; cpo["_fid"] = "AsJADLvpaXLU";
-            var _cpmp = _cpmp || []; _cpmp.push(cpo);
-            (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-            cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
-            var c = document.getElementsByTagName("script")[0];
-            c.parentNode.insertBefore(cp, c); })();
+            var cpo = [];
+            cpo["_object"] = "cincopa_b565e5";
+            cpo["_fid"] = "AsJADLvpaXLU";
+            var _cpmp = _cpmp || [];
+            _cpmp.push(cpo);
+            (function() {
+                var cp = document.createElement("script");
+                cp.type = "text/javascript";
+                cp.async = true;
+                cp.src = "https://rtcdn.cincopa.com/libasync.js";
+                var c = document.getElementsByTagName("script")[0];
+                c.parentNode.insertBefore(cp, c);
+            })();
         </script>
     </div>
-
     <footer>
         <div class="container">
-            <p>Follow us on social media:</p>
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 </body>
