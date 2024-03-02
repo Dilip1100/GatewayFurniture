@@ -15,8 +15,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333333;
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
         }
 
         .container {
@@ -26,29 +26,49 @@
         }
 
         header {
-            background-color: #222222;
-            color: #ffffff;
+            background-color: #ffffff; /* White header */
+            color: #000000; /* Black text */
             padding: 20px 0;
         }
 
         header h1 {
             font-size: 32px;
-            text-align: center;
         }
 
         nav ul {
             list-style-type: none;
-            text-align: center;
         }
 
         nav ul li {
             display: inline;
-            margin: 0 20px;
+            margin-right: 20px;
         }
 
         nav ul li a {
-            color: #ffffff;
+            color: #000000;
             text-decoration: none;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #f0f0f0; /* Light grey dropdown background */
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        nav ul li ul li {
+            display: block;
+            margin: 5px 0;
+        }
+
+        nav ul li ul li a {
+            color: #000000; /* Black text in dropdown */
         }
 
         section {
@@ -58,28 +78,23 @@
 
         section h2 {
             font-size: 28px;
-            margin-bottom: 30px;
         }
 
         footer {
-            background-color: #222222;
-            color: #ffffff;
+            background-color: #808080; /* Grey footer */
+            color: #ffffff; /* White text */
             text-align: center;
             padding: 20px 0;
-        }
-
-        .social-icons {
-            margin-top: 20px;
         }
 
         .social-icon {
             color: #ffffff;
             font-size: 24px;
-            margin: 0 10px;
+            margin-right: 20px; /* More space between social media icons */
         }
 
         .social-icon:hover {
-            color: #4682b4;
+            color: #4682b4; /* Blue on hover */
         }
     </style>
 </head>
@@ -90,7 +105,14 @@
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li>
+                        <a href="#">Products</a>
+                        <ul>
+                            <li><a href="#">Category 1</a></li>
+                            <li><a href="#">Category 2</a></li>
+                            <li><a href="#">Category 3</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -107,6 +129,16 @@
     <section id="products" class="section section-products">
         <div class="container">
             <h2>Our Products</h2>
+            <!-- Embed the provided code here -->
+            <div id="cincopa_b565e5">...</div>
+            <script type="text/javascript">
+                var cpo = []; cpo["_object"] ="cincopa_b565e5"; cpo["_fid"] = "AsJADLvpaXLU";
+                var _cpmp = _cpmp || []; _cpmp.push(cpo);
+                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+                cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
+                var c = document.getElementsByTagName("script")[0];
+                c.parentNode.insertBefore(cp, c); })();
+            </script>
         </div>
     </section>
 
@@ -124,11 +156,10 @@
 
     <footer>
         <div class="container">
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
+            <p>Follow us on social media:</p>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
 </body>
