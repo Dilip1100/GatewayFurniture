@@ -1,120 +1,166 @@
-<!DOCTYPE HTML>
-<!--
-    eRetail Outlet by [Your Name]
-    Free for personal and commercial use under the CCA 3.0 license
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>eRetail Outlet</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-<body class="is-preload">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eRetail Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Sidebar -->
-    <section id="sidebar">
-        <div class="inner">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #222222;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #222222;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+
+        .social-icon:hover {
+            color: #4682b4;
+        }
+
+        .product {
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+        }
+
+        .product p {
+            color: #666666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>eRetail Store</h1>
             <nav>
                 <ul>
-                    <li><a href="#intro">Welcome</a></li>
-                    <li><a href="#one">Our Products</a></li>
-                    <li><a href="#two">Deals & Offers</a></li>
-                    <li><a href="#three">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
+    </header>
+
+    <section id="home" class="section">
+        <div class="container">
+            <h2>Welcome to eRetail Store</h2>
+            <p>Discover the latest trends and shop from the comfort of your home.</p>
+        </div>
     </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Intro -->
-        <section id="intro" class="wrapper style1 fullscreen fade-up">
-            <div class="inner">
-                <h1>eRetail Outlet</h1>
-                <h2>Welcome to our online store</h2>
-                <p>
-                    Discover a wide range of products at amazing prices on our eRetail platform. Shop conveniently from the comfort of your home.
-                </p>
-                <ul class="actions">
-                    <li><a href="#one" class="button scrolly">Explore Products</a></li>
-                </ul>
-                <!-- Social media links -->
-                <ul class="icons">
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                </ul>
+    <section id="products" class="section">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Description of Product 1</p>
+                <button>Add to Cart</button>
             </div>
-        </section>
-
-        <!-- One -->
-        <section id="one" class="wrapper style2 spotlights">
-            <!-- Products section -->
-            <!-- Your product sections go here -->
-        </section>
-
-        <!-- Two -->
-        <section id="two" class="wrapper style3 fade-up">
-            <!-- Deals & Offers section -->
-            <!-- Your deals & offers section goes here -->
-        </section>
-
-        <!-- Three -->
-        <section id="three" class="wrapper style1 fade-up">
-            <div class="inner">
-                <h2>Contact Us</h2>
-                <!-- Contact information -->
-                <ul class="contact">
-                    <li>
-                        <h3>Address</h3>
-                        <span>
-                            [Your Address]<br />
-                            [City, State, Zip]<br />
-                            [Country]
-                        </span>
-                    </li>
-                    <li>
-                        <h3>Email</h3>
-                        <a href="mailto:info@eretailoutlet.com">info@eretailoutlet.com</a>
-                    </li>
-                    <li>
-                        <h3>Phone</h3>
-                        <span>[Your Phone Number]</span>
-                    </li>
-                </ul>
-                <!-- Social media links -->
-                <ul class="icons">
-                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                </ul>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Description of Product 2</p>
+                <button>Add to Cart</button>
             </div>
-        </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
-        <div class="inner">
-            <ul class="menu">
-                <li>&copy; [Your Name]</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
         </div>
-    </footer>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Learn more about our eRetail store and our mission.</p>
+        </div>
+    </section>
 
-</body>
-</html>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries or support.</p>
+        </div>
+    </section>
 
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" class="social-icon"><
