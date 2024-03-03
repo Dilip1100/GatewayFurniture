@@ -114,6 +114,26 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Dynamic content loading
+        window.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                section.addEventListener('click', () => {
+                    const sectionId = section.id;
+                    const contentUrl = `content/${sectionId}.html`;
+
+                    fetch(contentUrl)
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById(sectionId).innerHTML = data;
+                        })
+                        .catch(error => console.log('Error fetching content:', error));
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
