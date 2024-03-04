@@ -6,7 +6,6 @@
     <title>E-Retail Furniture Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Add your CSS styles here */
         /* Reset CSS */
         * {
             margin: 0;
@@ -46,13 +45,38 @@
 
         #slideshow-container img {
             width: 100%;
-            height: 300px; /* Uniform height for all images */
-            object-fit: cover; /* Maintain aspect ratio */
+            height: auto;
         }
 
-        /* Add your other styles for text boxes, social media icons, etc. */
+        .dropdown {
+            margin-top: 20px;
+            text-align: center;
+        }
 
-        /* Add your media queries if needed */
+        .dropdown select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #808080; /* Grey color for footer */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icon {
+            color: #ffffff;
+            margin: 0 5px;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
@@ -61,6 +85,16 @@
             <h1>E-Retail Furniture Store</h1>
         </div>
     </header>
+
+    <!-- Dropdown List -->
+    <div class="dropdown">
+        <select>
+            <option value="category1">Category 1</option>
+            <option value="category2">Category 2</option>
+            <option value="category3">Category 3</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
 
     <!-- Slideshow -->
     <div id="slideshow-container">
@@ -82,7 +116,7 @@
         </div>
     </div>
 
-    <!-- Social Media Icons -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="social-icons">
@@ -95,7 +129,6 @@
 
     <!-- JavaScript for Slideshow -->
     <script>
-        // JavaScript code for slideshow
         let currentImageIndex = 0;
         const images = document.querySelectorAll('#slideshow-container img');
         
