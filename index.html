@@ -3,95 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eRetail Website</title>
+    <title>E-Retail Furniture Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Styles for the header and footer */
-        header, footer {
-            background-color: #CCCCCC; /* Grey background color */
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Styles for the container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Style for the email button */
-        .email-btn {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .email-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* Style for the text boxes */
-        .email-text, .visitor-input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        /* Add your CSS styles here */
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
-        /* Style for social media icons */
-        .social-icons {
-            margin-top: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333333;
         }
 
-        .social-icon {
-            color: #333;
-            font-size: 24px;
-            margin: 0 10px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .social-icon:hover {
-            color: #007bff;
+        header {
+            background-color: #808080; /* Grey color for header */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
         }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        #slideshow-container {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        #slideshow-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Add your other styles for text boxes, social media icons, etc. */
+
+        /* Add your media queries if needed */
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to eRetail</h1>
+        <div class="container">
+            <h1>E-Retail Furniture Store</h1>
+        </div>
     </header>
+
+    <!-- Slideshow -->
+    <div id="slideshow-container">
+        <img src="image1.jpg" alt="Furniture Image 1">
+        <img src="image2.jpg" alt="Furniture Image 2">
+        <img src="image3.jpg" alt="Furniture Image 3">
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Text Boxes -->
     <div class="container">
-        <!-- Text boxes for email and visitor input -->
-        <input type="text" class="email-text" id="email" placeholder="Enter your email">
-        <input type="text" class="visitor-input" id="visitorInput" placeholder="Enter your message">
-        <!-- Email link button -->
-        <button onclick="sendInquiry()" class="email-btn">Send Inquiry</button>
+        <div>
+            <input type="text" placeholder="Enter your email">
+            <button type="button">Send Enquiry</button>
+        </div>
+        <div>
+            <textarea rows="6" placeholder="Type your message here"></textarea>
+            <button type="button">Send</button>
+        </div>
     </div>
-    <!-- Social media icons and links -->
-    <div class="social-icons">
-        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-    </div>
+
+    <!-- Social Media Icons -->
     <footer>
-        <p>Contact us: gateway.chn@gmail.com</p>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript for Slideshow -->
     <script>
-        function sendInquiry() {
-            var email = document.getElementById('email').value;
-            var visitorInput = document.getElementById('visitorInput').value;
-            // Construct your email here
-            var subject = "Inquiry from eRetail Website";
-            var body = "Visitor's Email: " + email + "\n\nVisitor's Message: " + visitorInput;
-            var mailtoLink = "mailto:gateway.chn@gmail.com" + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-            window.location.href = mailtoLink;
+        // JavaScript code for slideshow
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('#slideshow-container img');
+        
+        function showNextImage() {
+            images[currentImageIndex].style.display = 'none';
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.display = 'block';
         }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
     </script>
 </body>
 </html>
