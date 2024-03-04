@@ -17,6 +17,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center;
         }
 
         /* Style for the email button */
@@ -34,7 +35,7 @@
             background-color: #0056b3;
         }
 
-        /* Style for the text box */
+        /* Style for the text boxes */
         .email-text, .visitor-input {
             width: 80%;
             padding: 10px;
@@ -43,6 +44,21 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
+
+        /* Style for social media icons */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            color: #333;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+
+        .social-icon:hover {
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
@@ -50,12 +66,17 @@
         <h1>Welcome to eRetail</h1>
     </header>
     <div class="container">
-        <!-- Text box for email -->
+        <!-- Text boxes for email and visitor input -->
         <input type="text" class="email-text" id="email" placeholder="Enter your email">
-        <!-- Text box for visitor input -->
         <input type="text" class="visitor-input" id="visitorInput" placeholder="Enter your message">
         <!-- Email link button -->
         <button onclick="sendInquiry()" class="email-btn">Send Inquiry</button>
+    </div>
+    <!-- Social media icons and links -->
+    <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
     </div>
     <footer>
         <p>Contact us: gateway.chn@gmail.com</p>
