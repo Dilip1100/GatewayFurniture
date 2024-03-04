@@ -17,6 +17,8 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             color: #333333;
+            position: relative;
+            min-height: 100vh;
         }
 
         .container {
@@ -77,6 +79,38 @@
             margin: 0 5px;
             font-size: 20px;
         }
+
+        .text-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .text-boxes input[type="text"],
+        .text-boxes textarea {
+            width: calc(50% - 10px);
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: none;
+            box-sizing: border-box;
+        }
+
+        .text-boxes textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .text-boxes button {
+            padding: 10px 20px;
+            background-color: #808080;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -98,20 +132,20 @@
 
     <!-- Slideshow -->
     <div id="slideshow-container">
-        <img src="Screenshot%202024-03-02%20221257.png" alt="Sofa Classic">
-        <img src="Screenshot%202024-03-02%20221401.png" alt="Sofa Corner ">
-        <img src="Screenshot%202024-03-02%20221329.png" alt="Two Seater">
+        <img src="Screenshot%202024-03-02%20221257.png" alt="Sofa Classic" style="width: 100%;">
+        <img src="Screenshot%202024-03-02%20221401.png" alt="Sofa Corner" style="width: 100%;">
+        <img src="Screenshot%202024-03-02%20221329.png" alt="Two Seater" style="width: 100%;">
         <!-- Add more images as needed -->
     </div>
 
     <!-- Text Boxes -->
-    <div class="container">
+    <div class="container text-boxes">
         <div>
             <input type="text" placeholder="Enter your email">
             <button type="button">Send Enquiry</button>
         </div>
         <div>
-            <textarea rows="6" placeholder="Type your message here"></textarea>
+            <textarea placeholder="Type your message here"></textarea>
             <button type="button">Send</button>
         </div>
     </div>
