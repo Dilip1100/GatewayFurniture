@@ -3,166 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eRetail Store</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>eRetail Website</title>
     <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Styles for the header and footer */
+        header, footer {
+            background-color: #CCCCCC; /* Grey background color */
+            padding: 20px;
+            text-align: center;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333333;
-        }
-
+        /* Styles for the container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: #666666; /* Grey background color */
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 32px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            text-align: center;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        section {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-
-        footer {
-            background-color: #666666; /* Grey background color */
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icon {
-            color: #ffffff;
-            font-size: 24px;
-            margin: 0 10px;
-        }
-
-        .social-icon:hover {
-            color: #4682b4;
-        }
-
-        .product {
-            background-color: #ffffff;
-            border-radius: 5px;
             padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .product img {
-            width: 100%;
+        /* Style for the email button */
+        .email-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
             border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
         }
 
-        .product h3 {
-            margin-top: 10px;
+        .email-btn:hover {
+            background-color: #0056b3;
         }
 
-        .product p {
-            color: #666666;
-            margin-top: 10px;
+        /* Style for the text box */
+        .email-text {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="container">
-            <h1>eRetail Store</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Welcome to eRetail</h1>
     </header>
-
     <div class="container">
-        <section id="home" class="section">
-            <h2>Welcome to eRetail Store</h2>
-            <p>Discover the latest trends and shop from the comfort of your home.</p>
-        </section>
-
-        <section id="products" class="section">
-            <h2>Featured Products</h2>
-            <div class="product">
-                <img src="https://via.placeholder.com/300" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Description of Product 1</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/300" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Description of Product 2</p>
-                <button>Add to Cart</button>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <h2>About Us</h2>
-            <p>Learn more about our eRetail store and our mission.</p>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for any inquiries or support.</p>
-        </section>
+        <!-- Text box for email -->
+        <input type="text" class="email-text" placeholder="Enter your email">
+        <!-- Email link button -->
+        <a href="mailto:gateway.chn@gmail.com" class="email-btn">Send Inquiry</a>
     </div>
-
     <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
+        <p>Contact us: gateway.chn@gmail.com</p>
     </footer>
-
 </body>
 </html>
