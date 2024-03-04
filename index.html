@@ -28,14 +28,28 @@
         }
 
         header {
-            background-color: #808080; /* Grey color for header */
+            background-color: #333; /* Dark grey color for header */
             color: #ffffff;
             padding: 20px 0;
             text-align: center;
         }
 
         header h1 {
-            font-size: 32px;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .dropdown {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .dropdown select {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
         }
 
         #slideshow-container {
@@ -47,40 +61,8 @@
 
         #slideshow-container img {
             width: 100%;
-            height: auto;
-        }
-
-        .dropdown {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .dropdown select {
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
-        }
-
-        footer {
-            background-color: #808080; /* Grey color for footer */
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer .social-icons {
-            margin-top: 10px;
-        }
-
-        footer .social-icon {
-            color: #ffffff;
-            margin: 0 5px;
-            font-size: 20px;
+            height: 400px; /* Fixed height for slideshow images */
+            object-fit: cover; /* Maintain aspect ratio and cover container */
         }
 
         .text-boxes {
@@ -108,11 +90,37 @@
 
         .text-boxes button {
             padding: 10px 20px;
-            background-color: #808080;
+            background-color: #333; /* Dark grey color for buttons */
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+
+        footer {
+            background-color: #333; /* Dark grey color for footer */
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icon {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        /* Hover effect for buttons */
+        .text-boxes button:hover,
+        footer .social-icon:hover {
+            background-color: #555; /* Darker grey on hover */
         }
     </style>
 </head>
@@ -137,9 +145,9 @@
 
     <!-- Slideshow -->
     <div id="slideshow-container">
-        <img src="Screenshot%202024-03-02%20221257.png" alt="Sofa Classic" style="width: 100%;">
-        <img src="Screenshot%202024-03-02%20221401.png" alt="Sofa Corner" style="width: 100%;">
-        <img src="Screenshot%202024-03-02%20221329.png" alt="Two Seater" style="width: 100%;">
+        <img src="https://via.placeholder.com/1200x400" alt="Sofa Classic">
+        <img src="https://via.placeholder.com/1200x400" alt="Sofa Corner">
+        <img src="https://via.placeholder.com/1200x400" alt="Two Seater">
         <!-- Add more images as needed -->
     </div>
 
