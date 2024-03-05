@@ -31,6 +31,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
+            z-index: 2; /* Ensure navigation stays above other elements */
         }
 
         .nav ul {
@@ -75,6 +76,20 @@
             text-align: center; /* Center text */
             width: 80%; /* Adjust width as needed */
             max-width: 800px; /* Adjust max-width as needed */
+            z-index: 1; /* Ensure about section stays below other elements */
+        }
+
+        /* Slideshow */
+        #slideshow-container {
+            margin-top: 200px; /* Adjust margin as needed */
+            position: relative;
+            z-index: 0; /* Ensure slideshow stays behind other elements */
+        }
+
+        #slideshow-container img {
+            width: 100%;
+            height: auto;
+            display: none;
         }
 
         /* Footer */
@@ -115,13 +130,16 @@
             .about-us {
                 width: 90%;
             }
+            #slideshow-container {
+                margin-top: 100px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Navigation Pane -->
     <div class="nav">
-        <img src="logo.png" alt="Logo" class="logo">
+        <img src="Gateway_Logo.jpg" alt="Logo" class="logo">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -141,6 +159,14 @@
         <p>Gateway Marketing Pvt Ltd was established in 2009 in Chennai, TN, India as India's first retailer offering products at wholesale price which was strongly marketed throughout the city and is still known for Quality Products at Nominal Price. A 10,000 Sq Ft Showroom was Inaugurated with separate areas for each type of Home Furnishing Products which includes Living Room, Dining, Modular Kitchen and Bedroom Furniture as well as accessories. We also furnished Commercial establishments in Chennai and Bangalore such as Offices and Hotels. Post an era of retailing now Gateway is one of the Most trusted Sellers for Major E-Retail players in the Market such as Amazon, Flipkart starting 2024. For any enquiries leave your message below ... along with email address in order to serve you better.</p>
     </div>
 
+    <!-- Slideshow -->
+    <div id="slideshow-container">
+        <img src="Screenshot 2024-03-02 221401.png" alt="Slideshow Image 1">
+        <img src="Screenshot 2024-03-02 221329.png" alt="Slideshow Image 2">
+        <img src="Screenshot 2024-03-02 221257.png" alt="Slideshow Image 3">
+        <!-- Add more images as needed -->
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -152,5 +178,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('#slideshow-container img');
+
+        function showNextImage() {
+            images[currentImageIndex].style.display = 'none';
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.display = 'block';
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
 </body>
 </html>
