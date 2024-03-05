@@ -50,6 +50,15 @@
             color: #ccc;
         }
 
+        /* Furniture Store Heading */
+        .furniture-store {
+            position: fixed;
+            top: 20px;
+            left: 220px; /* Adjust based on nav width */
+            color: #333;
+            font-size: 24px;
+        }
+
         /* Dropdown List with Logos */
         .dropdown {
             text-align: center;
@@ -154,69 +163,12 @@
         </ul>
     </div>
 
+    <!-- Furniture Store Heading -->
+    <div class="furniture-store">
+        <h1>E-Retail Furniture Store</h1>
+    </div>
+
     <!-- Main Content -->
     <div class="main-content">
-        <!-- Header -->
-        <header>
-            <div class="container">
-                <h1>E-Retail Furniture Store</h1>
-            </div>
-        </header>
-
         <!-- Dropdown List with Logos -->
-        <div class="dropdown">
-            <img src="amazon_logo.png" alt="Amazon" class="logo">
-            <img src="flipkart_logo.png" alt="Flipkart" class="logo">
-            <select>
-                <option value="home_and_kitchen">Home and Kitchen</option>
-                <option value="office_essentials">Office Essentials</option>
-                <option value="exotics">Exotics</option>
-                <option value="sofas">Sofas</option>
-                <option value="accessories">Accessories</option>
-                <!-- Add more options as needed -->
-            </select>
-        </div>
-
-        <!-- Text Boxes -->
-        <div class="container text-boxes">
-            <div>
-                <input type="text" placeholder="Enter your email">
-                <textarea rows="6" placeholder="Type your message here"></textarea>
-                <button type="button">Send</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slideshow -->
-    <div id="slideshow">
-        <img src="Screenshot 2024-03-02 221401.png" alt="Slideshow Image 1">
-        <img src="Screenshot 2024-03-02 221329.png" alt="Slideshow Image 2">
-        <img src="Screenshot 2024-03-02 221257.png" alt="Slideshow Image 3">
-        <!-- Add more images as needed -->
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <!-- Add more social icons as needed -->
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript for Slideshow -->
-    <script>
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll('#slideshow img');
-
-        function showNextImage() {
-            images[currentImageIndex].style.display = 'none';
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            images[currentImageIndex].style.display = 'block';
-        }
-
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
-    </script>
-</body>
-</html>
+       
