@@ -169,6 +169,25 @@
         footer .social-icons a:hover {
             color: #ccc;
         }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .nav {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .furniture-store {
+                position: static;
+                text-align: center;
+            }
+            .dropdown {
+                margin-top: 20px;
+            }
+            .text-boxes {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -213,7 +232,12 @@
     <div class="main-content">
         <!-- About Us Section -->
         <div class="about-us">
+            <h2>About Us</h2>
             <p>Gateway Marketing Pvt Ltd was established in 2009 in Chennai, TN, India as India's first retailer offering products at wholesale price which was strongly marketed throughout the city and is still known for Quality Products at Nominal Price. A 10,000 Sq Ft Showroom was Inaugurated with separate areas for each type of Home Furnishing Products which includes Living Room, Dining, Modular Kitchen and Bedroom Furniture as well as accessories. We also furnished Commercial establishments in Chennai and Bangalore such as Offices and Hotels. Post an era of retailing now Gateway is one of the Most trusted Sellers for Major E-Retail players in the Market such as Amazon, Flipkart starting 2024. For any enquiries leave your message below ... along with email address in order to serve you better.</p>
+        </div>
+
+        <!-- Text Boxes -->
+        <div class="text-boxes">
             <input type="text" placeholder="Enter your email">
             <textarea rows="6" placeholder="Type your message here"></textarea>
             <button type="button">Send</button>
