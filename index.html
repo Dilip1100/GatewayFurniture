@@ -61,23 +61,25 @@
 
         /* Flash Content */
         #slideshow-container {
-            margin: 50px auto; /* Center the slideshow */
-            width: 80%; /* Set the width of the slideshow */
-            max-width: 800px; /* Set the maximum width of the slideshow */
-            position: relative;
+            position: fixed;
+            top: 100px; /* Adjust as needed */
+            left: 0;
+            width: 100%;
+            z-index: -1; /* Push slideshow behind other elements */
         }
 
         #slideshow-container img {
-            width: 100%; /* Make slideshow images fill the container */
-            height: auto; /* Maintain aspect ratio */
-            display: none; /* Hide all images by default */
+            width: 100%;
+            height: auto;
+            display: none;
         }
 
         /* Dropdown List with Logos */
         .dropdown {
             text-align: center;
-            margin-bottom: 20px;
+            margin: 50px auto; /* Center the dropdown */
             position: relative;
+            z-index: 2; /* Ensure dropdown stays above slideshow */
         }
 
         .dropdown img.logo {
@@ -164,6 +166,20 @@
         <h1>E-Retail Furniture Store</h1>
     </div>
 
+    <!-- Dropdown List with Logos -->
+    <div class="dropdown">
+        <img src="amazon_logo.png" alt="Amazon" class="logo">
+        <img src="flipkart_logo.png" alt="Flipkart" class="logo">
+        <select>
+            <option value="home_and_kitchen">Home and Kitchen</option>
+            <option value="office_essentials">Office Essentials</option>
+            <option value="exotics">Exotics</option>
+            <option value="sofas">Sofas</option>
+            <option value="accessories">Accessories</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+
     <!-- Flash Content -->
     <div id="slideshow-container">
         <img src="Screenshot 2024-03-02 221401.png" alt="Slideshow Image 1">
@@ -174,20 +190,6 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <!-- Dropdown List with Logos -->
-        <div class="dropdown">
-            <img src="amazon_logo.png" alt="Amazon" class="logo">
-            <img src="flipkart_logo.png" alt="Flipkart" class="logo">
-            <select>
-                <option value="home_and_kitchen">Home and Kitchen</option>
-                <option value="office_essentials">Office Essentials</option>
-                <option value="exotics">Exotics</option>
-                <option value="sofas">Sofas</option>
-                <option value="accessories">Accessories</option>
-                <!-- Add more options as needed -->
-            </select>
-        </div>
-
         <!-- Text Boxes -->
         <div class="container text-boxes">
             <div>
@@ -219,7 +221,7 @@
             images[currentImageIndex].style.display = 'block';
         }
 
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
+        setInterval(showNextImage, 4000); // Change image every 4 seconds
     </script>
 </body>
 </html>
