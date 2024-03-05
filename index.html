@@ -122,6 +122,19 @@
         footer .social-icons a:hover {
             color: #ccc;
         }
+
+        /* Slideshow */
+        #slideshow {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -144,6 +157,14 @@
             </div>
         </header>
 
+        <!-- Slideshow -->
+        <div id="slideshow">
+            <img src="https://via.placeholder.com/800x400" alt="Slideshow Image 1">
+            <img src="https://via.placeholder.com/800x400" alt="Slideshow Image 2">
+            <img src="https://via.placeholder.com/800x400" alt="Slideshow Image 3">
+            <!-- Add more images as needed -->
+        </div>
+
         <!-- Dropdown List with Logos -->
         <div class="dropdown">
             <img src="amazon_logo.png" alt="Amazon" class="logo">
@@ -162,11 +183,9 @@
         <div class="container text-boxes">
             <div>
                 <input type="text" placeholder="Enter your email">
-            </div>
-            <div>
                 <textarea rows="6" placeholder="Type your message here"></textarea>
+                <button type="button">Send</button>
             </div>
-            <button type="button">Send</button>
         </div>
     </div>
 
@@ -174,4 +193,24 @@
     <footer>
         <div class="container">
             <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('#slideshow img');
+
+        function showNextImage() {
+            images[currentImageIndex].style.display = 'none';
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].style.display = 'block';
+        }
+
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
+</body>
+</html>
