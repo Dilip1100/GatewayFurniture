@@ -21,67 +21,60 @@
 
         /* Navigation Pane */
         .nav {
-            width: 200px;
-            height: 100vh;
+            width: 100%;
+            height: 100px; /* Adjust height as needed */
             background-color: #333;
             position: fixed;
             top: 0;
             left: 0;
-            overflow-y: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
         }
 
         .nav ul {
             list-style-type: none;
-            padding: 20px;
+            display: flex;
         }
 
         .nav ul li {
-            margin-bottom: 10px;
+            margin-right: 20px;
         }
 
         .nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 16px;
-            display: block;
         }
 
         .nav ul li a:hover {
             color: #ccc;
         }
 
+        /* Logo */
+        .logo {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            object-fit: contain;
+        }
+
         /* Furniture Store Heading */
         .furniture-store {
-            position: fixed;
-            top: 20px;
-            left: 220px; /* Adjust based on nav width */
-            color: #333;
-            font-size: 24px;
-        }
-
-        /* Flash Content */
-        #slideshow-container {
-            position: fixed;
-            top: 100px; /* Adjust as needed */
-            left: 0;
-            width: 100%;
-            z-index: -1; /* Push slideshow behind other elements */
-        }
-
-        #slideshow-container img {
-            width: 100%;
-            height: auto;
-            display: none;
+            text-align: center;
+            margin-top: 50px; /* Adjust margin as needed */
         }
 
         /* About Us Section */
         .about-us {
-            margin: 50px 200px; /* Adjust margins to stretch from navigation to right end */
+            margin: 50px auto; /* Adjust margin as needed */
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+            background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center; /* Center text */
+            width: 80%; /* Adjust width as needed */
+            max-width: 800px; /* Adjust max-width as needed */
         }
 
         /* Footer */
@@ -112,16 +105,15 @@
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .nav {
-                width: 100%;
                 height: auto;
-                position: relative;
+                flex-direction: column;
+                align-items: center;
             }
-            .furniture-store {
-                position: static;
-                text-align: center;
+            .logo {
+                margin-bottom: 20px;
             }
             .about-us {
-                margin: 20px;
+                width: 90%;
             }
         }
     </style>
@@ -129,6 +121,7 @@
 <body>
     <!-- Navigation Pane -->
     <div class="nav">
+        <img src="logo.png" alt="Logo" class="logo">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -142,21 +135,10 @@
         <h1>Gateway Marketing India</h1>
     </div>
 
-    <!-- Flash Content -->
-    <div id="slideshow-container">
-        <img src="Screenshot 2024-03-02 221401.png" alt="Slideshow Image 1">
-        <img src="Screenshot 2024-03-02 221329.png" alt="Slideshow Image 2">
-        <img src="Screenshot 2024-03-02 221257.png" alt="Slideshow Image 3">
-        <!-- Add more images as needed -->
-    </div>
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- About Us Section -->
-        <div class="about-us">
-            <h2>About Us</h2>
-            <p>Gateway Marketing Pvt Ltd was established in 2009 in Chennai, TN, India as India's first retailer offering products at wholesale price which was strongly marketed throughout the city and is still known for Quality Products at Nominal Price. A 10,000 Sq Ft Showroom was Inaugurated with separate areas for each type of Home Furnishing Products which includes Living Room, Dining, Modular Kitchen and Bedroom Furniture as well as accessories. We also furnished Commercial establishments in Chennai and Bangalore such as Offices and Hotels. Post an era of retailing now Gateway is one of the Most trusted Sellers for Major E-Retail players in the Market such as Amazon, Flipkart starting 2024. For any enquiries leave your message below ... along with email address in order to serve you better.</p>
-        </div>
+    <!-- About Us Section -->
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>Gateway Marketing Pvt Ltd was established in 2009 in Chennai, TN, India as India's first retailer offering products at wholesale price which was strongly marketed throughout the city and is still known for Quality Products at Nominal Price. A 10,000 Sq Ft Showroom was Inaugurated with separate areas for each type of Home Furnishing Products which includes Living Room, Dining, Modular Kitchen and Bedroom Furniture as well as accessories. We also furnished Commercial establishments in Chennai and Bangalore such as Offices and Hotels. Post an era of retailing now Gateway is one of the Most trusted Sellers for Major E-Retail players in the Market such as Amazon, Flipkart starting 2024. For any enquiries leave your message below ... along with email address in order to serve you better.</p>
     </div>
 
     <!-- Footer -->
@@ -170,17 +152,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll('#slideshow-container img');
-
-        function showNextImage() {
-            images[currentImageIndex].style.display = 'none';
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            images[currentImageIndex].style.display = 'block';
-        }
-
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
-    </script>
 </body>
 </html>
