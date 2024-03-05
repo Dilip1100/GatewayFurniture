@@ -74,29 +74,6 @@
             display: none;
         }
 
-        /* Dropdown List with Logos */
-        .dropdown {
-            text-align: center;
-            margin: 50px auto; /* Center the dropdown */
-            position: relative;
-            z-index: 2; /* Ensure dropdown stays above slideshow */
-        }
-
-        .dropdown img.logo {
-            width: 50px; /* Adjust size as needed */
-            height: auto;
-            margin: 0 10px; /* Add margin between logos */
-            vertical-align: middle;
-        }
-
-        .dropdown select {
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
-        }
-
         /* About Us Section */
         .about-us {
             margin: 50px auto; /* Center the content */
@@ -106,43 +83,6 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center; /* Center text */
-        }
-
-        /* Text Boxes */
-        .text-boxes {
-            margin: 0 auto; /* Center the text boxes */
-            width: 80%; /* Adjust width as needed */
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Center text */
-        }
-
-        .text-boxes input[type="text"],
-        .text-boxes textarea {
-            width: calc(100% - 20px); /* Subtract padding from width */
-            padding: 10px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .text-boxes textarea {
-            resize: none; /* Disable textarea resize */
-        }
-
-        .text-boxes button {
-            padding: 10px 20px;
-            background-color: #808080;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .text-boxes button:hover {
-            background-color: #555;
         }
 
         /* Footer */
@@ -181,11 +121,8 @@
                 position: static;
                 text-align: center;
             }
-            .dropdown {
+            .about-us {
                 margin-top: 20px;
-            }
-            .text-boxes {
-                width: 100%;
             }
         }
     </style>
@@ -206,20 +143,6 @@
         <h1>E-Retail Furniture Store</h1>
     </div>
 
-    <!-- Dropdown List with Logos -->
-    <div class="dropdown">
-        <img src="amazon_logo.png" alt="Amazon" class="logo">
-        <img src="flipkart_logo.png" alt="Flipkart" class="logo">
-        <select>
-            <option value="home_and_kitchen">Home and Kitchen</option>
-            <option value="office_essentials">Office Essentials</option>
-            <option value="exotics">Exotics</option>
-            <option value="sofas">Sofas</option>
-            <option value="accessories">Accessories</option>
-            <!-- Add more options as needed -->
-        </select>
-    </div>
-
     <!-- Flash Content -->
     <div id="slideshow-container">
         <img src="Screenshot 2024-03-02 221401.png" alt="Slideshow Image 1">
@@ -234,13 +157,6 @@
         <div class="about-us">
             <h2>About Us</h2>
             <p>Gateway Marketing Pvt Ltd was established in 2009 in Chennai, TN, India as India's first retailer offering products at wholesale price which was strongly marketed throughout the city and is still known for Quality Products at Nominal Price. A 10,000 Sq Ft Showroom was Inaugurated with separate areas for each type of Home Furnishing Products which includes Living Room, Dining, Modular Kitchen and Bedroom Furniture as well as accessories. We also furnished Commercial establishments in Chennai and Bangalore such as Offices and Hotels. Post an era of retailing now Gateway is one of the Most trusted Sellers for Major E-Retail players in the Market such as Amazon, Flipkart starting 2024. For any enquiries leave your message below ... along with email address in order to serve you better.</p>
-        </div>
-
-        <!-- Text Boxes -->
-        <div class="text-boxes">
-            <input type="text" placeholder="Enter your email">
-            <textarea rows="6" placeholder="Type your message here"></textarea>
-            <button type="button">Send</button>
         </div>
     </div>
 
