@@ -17,31 +17,51 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             color: #333333;
-            position: relative;
-            min-height: 100vh;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* Navigation Pane */
+        .nav {
+            width: 200px;
+            height: 100vh;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
         }
 
-        header {
-            background-color: #333; /* Dark grey color for header */
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
+        .nav ul {
+            list-style-type: none;
+            padding: 20px;
         }
 
-        header h1 {
-            font-size: 36px;
+        .nav ul li {
             margin-bottom: 10px;
         }
 
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+        }
+
+        .nav ul li a:hover {
+            color: #ccc;
+        }
+
+        /* Dropdown List with Logos */
         .dropdown {
             text-align: center;
             margin-bottom: 20px;
+            position: relative;
+        }
+
+        .dropdown img.logo {
+            width: 50px; /* Adjust size as needed */
+            height: auto;
+            margin: 0 10px; /* Add margin between logos */
+            vertical-align: middle;
         }
 
         .dropdown select {
@@ -52,113 +72,100 @@
             background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
         }
 
-        #slideshow-container {
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        #slideshow-container img {
-            width: 100%;
-            height: 400px; /* Fixed height for slideshow images */
-            object-fit: cover; /* Maintain aspect ratio and cover container */
-        }
-
+        /* Text Boxes */
         .text-boxes {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            margin-left: 220px; /* Adjust based on nav width */
         }
 
         .text-boxes input[type="text"],
         .text-boxes textarea {
-            width: calc(50% - 10px);
+            width: 100%;
             padding: 10px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            border: none;
             border-radius: 5px;
-            box-shadow: none;
-            box-sizing: border-box;
-        }
-
-        .text-boxes textarea {
-            height: 120px;
-            resize: vertical;
         }
 
         .text-boxes button {
             padding: 10px 20px;
-            background-color: #333; /* Dark grey color for buttons */
+            background-color: #808080;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
 
+        .text-boxes button:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
         footer {
-            background-color: #333; /* Dark grey color for footer */
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
+            background-color: #808080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
 
         footer .social-icons {
             margin-top: 10px;
         }
 
-        footer .social-icon {
-            color: #ffffff;
+        footer .social-icons a {
+            color: #fff;
             margin: 0 10px;
-            font-size: 20px;
         }
 
-        /* Hover effect for buttons */
-        .text-boxes button:hover,
-        footer .social-icon:hover {
-            background-color: #555; /* Darker grey on hover */
+        footer .social-icons a:hover {
+            color: #ccc;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>E-Retail Furniture Store</h1>
-        </div>
-    </header>
-
-    <!-- Dropdown List -->
-    <div class="dropdown">
-        <select>
-            <option value="home_and_kitchen">Home and Kitchen</option>
-            <option value="office_essentials">Office Essentials</option>
-            <option value="exotics">Exotics</option>
-            <option value="sofas">Sofas</option>
-            <option value="accessories">Accessories</option>
-            <!-- Add more options as needed -->
-        </select>
+    <!-- Navigation Pane -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
 
-    <!-- Slideshow -->
-    <div id="slideshow-container">
-        <img src="Screenshot 2024-03-02 221329.png" alt="Sofa Classic">
-        <img src="Screenshot 2024-03-02 221401.png" alt="Sofa Corner">
-        <img src="Screenshot 2024-03-02 221257.png" alt="Two Seater">
-        <!-- Add more images as needed -->
-    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <h1>E-Retail Furniture Store</h1>
+            </div>
+        </header>
 
-    <!-- Text Boxes -->
-    <div class="container text-boxes">
-        <div>
-            <input type="text" placeholder="Enter your email">
-            <button type="button">Send Enquiry</button>
+        <!-- Dropdown List with Logos -->
+        <div class="dropdown">
+            <img src="amazon_logo.png" alt="Amazon" class="logo">
+            <img src="flipkart_logo.png" alt="Flipkart" class="logo">
+            <select>
+                <option value="home_and_kitchen">Home and Kitchen</option>
+                <option value="office_essentials">Office Essentials</option>
+                <option value="exotics">Exotics</option>
+                <option value="sofas">Sofas</option>
+                <option value="accessories">Accessories</option>
+                <!-- Add more options as needed -->
+            </select>
         </div>
-        <div>
-            <textarea placeholder="Type your message here"></textarea>
+
+        <!-- Text Boxes -->
+        <div class="container text-boxes">
+            <div>
+                <input type="text" placeholder="Enter your email">
+            </div>
+            <div>
+                <textarea rows="6" placeholder="Type your message here"></textarea>
+            </div>
             <button type="button">Send</button>
         </div>
     </div>
@@ -167,25 +174,4 @@
     <footer>
         <div class="container">
             <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript for Slideshow -->
-    <script>
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll('#slideshow-container img');
-        
-        function showNextImage() {
-            images[currentImageIndex].style.display = 'none';
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            images[currentImageIndex].style.display = 'block';
-        }
-
-        setInterval(showNextImage, 3000); // Change image every 3 seconds
-    </script>
-</body>
-</html>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a
