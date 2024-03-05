@@ -132,7 +132,8 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: 0; /* Ensure slideshow stays behind other elements */
+            z-index: -1; /* Ensure slideshow stays behind other elements */
+            opacity: 0.5; /* Set opacity for transparency */
         }
 
         #slideshow img {
